@@ -2,10 +2,10 @@
     display: flex;
     justify-content: space-between;
     gap: 2em;
-    padding: 0 20px 0 20px;
+    padding: 0 10px 0 10px;
 }
 #product{
-    width: 55%;
+    width: 60%;
 }
 .div1{
     padding: 20px;
@@ -20,7 +20,7 @@ p{
 }
 .div1 button{
     color: white;
-    margin-left: 200PX;
+    margin-left: 120PX;
     background-color: rgb(16, 129, 204);
     border: 1px solid white;
     border-radius: 10px;
@@ -32,6 +32,10 @@ h1{
     border: 1px solid white;
     border-radius: 10px;
 }
+.image{
+    width: 220px;
+    height: 150px;
+}
 /*cart*/
 #cart{
     width: 35%;
@@ -40,7 +44,7 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     border: 1px dotted black;
     margin-bottom: 30px;
 }
@@ -56,6 +60,7 @@ h1{
 .cart-list img{
     width: 100px;
     height: 100px;
+    margin-right: 20px;
 }
 input{
     width: 30px;
@@ -86,4 +91,8 @@ input{
     background-color:rgb(122, 122, 122) ;
     border: 1px solid white;
     border-radius: 5px;
+}
+#List,.process-list{
+    margin-left: 10px;
+    margin-right: 10px;
 }
