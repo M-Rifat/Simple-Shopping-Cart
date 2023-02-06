@@ -1,6 +1,9 @@
 body{
     background: rgb(255, 255, 255);
 }
+button:hover{
+    cursor: pointer;
+}
 .main{
     display: flex;
     justify-content: space-between;

@@ -6,9 +6,21 @@ for (let i = 0; i < addToCart.length; i++) {
         var title = document.getElementsByClassName('title')[i].innerText;
         var price = document.getElementsByClassName('price')[i].innerText;
         var imageSrc = document.getElementsByClassName('image')[i].src;
-        console.log(imageSrc, title, price);
+        // console.log(imageSrc, title, price);
+        let itemName = document.querySelectorAll('.cart-list h2');
+        flag=0;
+        for (let i = 0; i < itemName.length; i++) {
+            if (itemName[i].innerText===title) {
+                flag=1;
+            }            
+        }
+        if (flag==1) {
+            alert("Item Already Added")
+        }
+        else{
         addItemToCart(imageSrc, title, price);
         updatePrice();
+    }
     }
 }
 
@@ -23,7 +35,7 @@ function addItemToCart(imageSrc, title, price) {
     <p>${price}</p>
 </div>
 <div class="right">
-    <input type="number" name="" id="qnt" value="1">
+    <input type="number" name="" id="qnt" value="1" min="0">
     <button class="cross">Remove</button>
 </div>
  </div>`
@@ -63,9 +75,6 @@ function input(){
 let inputQuantity = document.querySelectorAll('#qnt');
 for (let i = 0; i < inputQuantity.length; i++) {
     inputQuantity[i].onchange = function () {
-        if (isNaN(inputQuantity[i].value) || inputQuantity[i].value <= 0) {
-            inputQuantity[i].value = 1;
-        }
         updatePrice();
     }
 }
